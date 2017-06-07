@@ -1,0 +1,8 @@
+# vi-mode for non-terminal applications
+
+# remap left-control h/j/k/l -> arrow keys
+lctrl - h         ![HyperTerm,Terminal,Nimble Commander]      :   khd -p "- left"
+lctrl - j         ![HyperTerm,Terminal,Nimble Commander]      :   khd -p "- down"
+lctrl - k         ![HyperTerm,Terminal,Nimble Commander]      :   khd -p "- up"
+lctrl - l         ![HyperTerm,Terminal,Nimble Commander] : khd -p "- right"
+lctrl - 1                                                     :   kwmc window -c split-mode toggle

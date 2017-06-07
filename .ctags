@@ -1,0 +1,12 @@
+--recurse=yes
+--python-kinds=-i
+--exclude=.git
+--exclude=vendor/*
+--exclude=node_modules/*
+--exclude=db/*
+--exclude=log/*
+--exclude=venv
+--exclude=migrations
+--exclude=*.png
+--exclude=*.jpg
+--exclude=*.pyc

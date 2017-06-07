@@ -1,0 +1,298 @@
+" Settings {{{
+
+" Editor
+set vicmd=nvim
+
+" Trash Directory
+set trashdir=~/.Trash
+
+" This is how many directories to store in the directory history.
+set history=0
+
+" Follow links on l or Enter.
+set followlinks
+
+" With this option turned on you can run partially entered commands with
+" unambiguous beginning using :! (e.g. :!Te instead of :!Terminal or :!Te<tab>).
+set fastrun
+
+" Natural sort of (version) numbers within text.
+set sortnumbers
+
+" Maximum number of changes that can be undone.
+set undolevels=5
+
+" If you installed the vim.txt help file set vimhelp.
+" If would rather use a plain text help file set novimhelp.
+set novimhelp
+
+" If you would like to run an executable file when you
+" press return on the file name set this.
+set norunexec
+
+" Use KiB, MiB, ... instead of KB, MB, ...
+"set iec
+
+" Color scheme
+colorscheme skesh_theme
+
+" The FUSE_HOME directory will be used as a root dir for all FUSE mounts.
+" Unless it exists with write/exec permissions set, vifm will attempt to
+" create it.
+set fusehome=/tmp/vifm_FUSE
+
+" Timeshtamp 
+set timefmt=%d/%m/%Y\ %H:%M
+
+" Show list of matches on tab complition in command-line mode
+set wildmenu
+
+" Ignore case in search patterns unless it contains at least one uppercase
+" letter
+set ignorecase
+set smartcase
+
+" Don't highlight search results automatically
+"set nohlsearch
+
+" Use increment searching (search while typing)
+set incsearch
+
+" Try to leave some space from cursor to upper/lower border in lists
+set scrolloff=4
+
+" Don't do to much requests to slow file systems
+set slowfs=curlftpfs
+
+"}}}
+
+" Set custom status line look
+set statusline="  %t%= %A %10u:%-7g %15s %20d  "
+
+" What should be saved automatically between vifm runs
+" Like in previous versions of vifm
+" set vifminfo=options,filetypes,commands,bookmarks,dhistory,state,cs
+" Like in vi
+set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
+    \phistory,fhistory,dirstack,registers,bookmarks
+
+" Marks {{{
+
+" :mark mark /full/directory/path [filename]
+mark b ~/bin/
+mark h ~/
+
+" }}}
+" Allias {{{
+
+" :com[mand] command_name action
+" The following macros can be used in a command
+" %a is replaced with the user arguments.
+" %c the current file under the cursor.
+" %C the current file under the cursor in the other directory.
+" %f the current selected file, or files.
+" %F the current selected file, or files in the other directory.
+" %b same as %f %F.
+" %d the current directory name.
+" %D the other window directory name.
+" %m run the command in a menu window
+
+command df df -h %m 2> /dev/null
+command diff vi -d %f %F
+command zip zip -r %f.zip %f
+command run !! ./%f
+command make !!make
+command vgrep vi "+grep %a"
+command ln !ln -s %d/%f %D
+
+" }}}
+" FileTypes {{{
+
+" Pdf
+filetype *.pdf open %f
+
+" PostScript
+filextype *.ps open %f
+
+" Djvu
+filextype *.djvu open %f
+
+" Audio
+filetype *.wav,*.mp3,*.flac,*.ogg,*.m4a
+       \ {Play using ffplay}
+       \ ffplay %c,
+       \ {Play using MPlayer}
+       \ mplayer %f,
+fileviewer *.mp3 mp3info
+
+" Video
+filetype *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.vob,*.flv
+        \ {View using ffplay}
+        \ ffplay -fs %c,
+        \ {View using Dragon}
+        \ dragon %f,
+        \ {View using mplayer}
+        \ open %f,
+
+" Web
+filetype *.html,*.htm open %f
+
+" Object
+filetype *.o nm %f | less
+
+" Image
+filetype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
+        \ open %f
+
+" MD5
+filetype *.md5
+       \ {Check MD5 hash sum}
+       \ md5sum -c %f,
+
+" FuseZipMount
+filetype *.zip,*.jar,*.war,*.ear
+       \ {Mount with fuse-zip}
+       \ FUSE_MOUNT|fuse-zip %SOURCE_FILE %DESTINATION_DIR,
+       \ {View contents}
+       \ zip -sf %c | less,
+       \ tar -xf %c,
+fileviewer *.zip,*.jar,*.war,*.ear zip -sf %c
+
+" ArchiveMount
+filetype *.tar.bz2,*.tbz2,*.tgz,*.tar.gz
+       \ {Mount with archivemount}
+       \ FUSE_MOUNT|archivemount %SOURCE_FILE %DESTINATION_DIR,
+fileviewer *.tgz,*.tar.gz tar -tzf %c
+fileviewer *.tar.bz2,*.tbz2 tar -tjf %c
+
+" Rar2FsMount
+filetype *.rar
+       \ {Mount with rar2fs}
+       \ FUSE_MOUNT|rar2fs %SOURCE_FILE %DESTINATION_DIR,
+
+" IsoMount
+filetype *.iso
+       \ {Mount with fuseiso}
+       \ FUSE_MOUNT|fuseiso %SOURCE_FILE %DESTINATION_DIR,
+
+" SshMount
+filetype *.ssh
+       \ {Mount with sshfs}
+       \ FUSE_MOUNT2|sshfs %PARAM %DESTINATION_DIR,
+
+" FtpMount
+filetype *.ftp
+       \ {Mount with curlftpfs}
+       \ FUSE_MOUNT2|curlftpfs -o ftp_port=-,,disable_eprt %PARAM %DESTINATION_DIR,
+
+
+" Office files
+filetype *.doc,*.docx,*.xls,*.xlsx open %f
+
+"}}}
+" Keymap {{{
+" Sample mappings
+nmap s :shell<cr>
+nmap S :sort<cr>
+nmap w :view<cr>
+nmap o :!gvim --remote-tab-silent %f<cr>
+nmap O :!gvim %f<cr>
+
+" Open file in the background using its default program
+nmap gb :file &<cr>l
+
+" Yank current directory path into the clipboard
+nmap yd :!echo %d | xclip %i<cr>
+
+" Yank current file path into the clipboard
+nmap yf :!echo %c:p | xclip %i<cr>
+
+" Mappings for faster renaming
+nmap I cw<c-a>
+nmap cc cw<c-u>
+nmap A cw<c-w>
+
+" Opening console in current directory
+nmap ,t :!xterm &<cr>
+
+" Opening vi to edit .vifmrc
+nmap ,c :execute ':!vi $MYVIFMRC' | restart<cr>
+" Opening gvim to edit .vifmrc
+nmap ,C :!gvim --remote-tab-silent $MYVIFMRC &<cr>
+
+" Toggle wrap setting on ,w key
+nmap ,w :set wrap!<cr>
+
+" Example of standard two-panel file managers mappings
+nmap <f3> :!less %f<cr>
+nmap <f4> :edit<cr>
+nmap <f5> :copy<cr>
+nmap <f6> :move<cr>
+nmap <f7> :mkdir<space>
+nmap <f8> :delete<cr>
+nmap ё `
+nmap й q
+nmap ц w
+nmap у e
+nmap к r
+nmap е t
+nmap н y
+nmap г u
+nmap ш i
+nmap щ o
+nmap з p
+nmap х [
+nmap ъ ]
+nmap ф a
+nmap ы s
+nmap в d
+nmap а f
+nmap п g
+nmap р h
+nmap о j
+nmap л k
+nmap д l
+nmap ж ;
+nmap э '
+nmap я z
+nmap ч x
+nmap с c
+nmap м v
+nmap и b
+nmap т n
+nmap ь m
+nmap б ,
+nmap ю .
+nmap Ё ~
+nmap Й Q
+nmap Ц W
+nmap У E
+nmap К R
+nmap Е T
+nmap Н Y
+nmap Г U
+nmap Ш I
+nmap Щ O
+nmap З P
+nmap Х {
+nmap Ъ }
+nmap Ф A
+nmap Ы S
+nmap В D
+nmap А F
+nmap П G
+nmap Р H
+nmap О J
+nmap Л K
+nmap Д L
+nmap Ж :
+nmap Э "
+nmap Я Z
+nmap Ч X
+nmap С C
+nmap М V
+nmap И B
+nmap Т N
+nmap Ь M
+nmap Б <
+nmap Ю >}}}

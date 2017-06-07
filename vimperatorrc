@@ -1,0 +1,169 @@
+" Vimperator Settings /*{{{*/
+
+" colorscheme
+colorscheme indigo
+
+set titlestring=""
+set visualbell
+set wildmode=full
+"set wildmode=list:longest,full
+
+" gui
+set gui=none,tabs
+
+" animation
+set animations=false
+
+" default search/suggest engine: google
+set defsearch=google
+set suggestengines=google
+
+" don't focus any "input" elements automatically when open pages. 
+set focuscontent
+
+" completion priority in :[tab]open
+"s - Search engines and keyword URLs
+"f - Local files
+"l - Firefox location bar entries
+"(bookmarks and history sorted in an intelligent way)
+"b - Bookmarks
+"h - History
+"S - Search engine suggestions
+"t - Open tabs
+set complete=bSl
+
+" Controls which characters are used to generate hint labels
+set hintchars="qwertyuiopasdfghjklzxcvbnm"
+
+" a max number of listing items
+set maxitems=20
+
+" scrollbar
+set scrollbars=true
+
+" status bar
+set status=position,input,location
+": tabcount
+
+" commands history
+set messages=0
+
+set hlsearch
+set smartcase
+
+" /*}}}*/
+
+" Firefox settings /*{{{*/
+
+" start page
+set! browser.startup.homepage=about:newtab ;;
+
+" Make Firefox run faster by using JIT
+set! javascript.options.jit.chrome=true
+
+" popup and permission in fullscreen
+set! dom.disable_beforeunload=true 
+
+" Don't focus text area on page load
+set! browser.autofocus=false
+
+" don't animate tab-bar when switch to fullscreen
+set! browser.fullscreen.animateUp=0
+
+" don't resize when open images
+set! browser.enabel_automatic_image_resizing=false
+
+" don't show download-manager
+set! browser.download.manager.showWhenStarting=false
+
+" clear all autocmds to avoid troubles from loading rc fle several times
+autocmd!
+
+" dont close firefox after close last tab
+set! browser.tabs.closeWindowWithLastTab=false
+
+" dont show notification about video in fullscreen
+set! full-screen-api.approval-required=false
+
+" new tab
+set! browser.newtab.preload=false
+
+" /*}}}*/
+
+" Keybindings /*{{{*/
+
+nnoremap j 5j
+nnoremap k 5k
+
+" /*}}}*/
+
+" Moving on rus keybord /*{{{*/
+
+map ё `
+map й q
+map ц w
+map у e
+map к r
+map е t
+map н y
+map г u
+map ш i
+map щ o
+map з p
+map х [
+map ъ ]
+map ф a
+map ы s
+map в d
+map а f
+map п g
+map р h
+map о j
+map л k
+map д l
+map ж ;
+map э '
+map я z
+map ч x
+map с c
+map м v
+map и b
+map т n
+map ь m
+map б ,
+map ю .
+map Ё ~
+map Й Q
+map Ц W
+map У E
+map К R
+map Е T
+map Н Y
+map Г U
+map Ш I
+map Щ O
+map З P
+map Х {
+map Ъ }
+map Ф A
+map Ы S
+map В D
+map А F
+map П G
+map Р H
+map О J
+map Л K
+map Д L
+map Ж :
+map Э "
+map Я Z
+map Ч X
+map С C
+map М V
+map И B
+map Т N
+map Ь M
+map Б <
+map Ю >
+
+" /*}}}*/

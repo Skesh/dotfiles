@@ -1,0 +1,10 @@
+[dotfiles]
+repository = ~/.dotfiles
+packages = [
+	'config/zsh',
+	'config/nvim',]
+ignore = [
+    '.git',
+    '.zcompdump*',
+    'install.sh',
+    '.gitignore',]

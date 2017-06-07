@@ -1,0 +1,214 @@
+# Shougo {{{
+
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'Shougo/denite.nvim'
+
+[[plugins]]
+repo = 'haya14busa/dein-command.vim'
+
+[[plugins]]
+repo = 'Shougo/neoinclude.vim'
+
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+build = 'make'
+
+# }}}
+
+[[plugins]]
+repo = 'scrooloose/nerdcommenter'
+
+[[plugins]]
+repo = 'chiel92/vim-autoformat'
+
+[[plugins]]
+repo = 'qpkorr/vim-bufkill'
+
+[[plugins]]
+repo = 'craigemery/vim-autotag'
+
+# Complete {{{
+
+[[plugins]]
+repo = 'Valloric/YouCompleteMe'
+build = './install.py'
+
+#[[plugins]]
+#repo = 'Shougo/deoplete.nvim'
+#hook_add = '''
+#let g:deoplete#enable_at_startup = 1
+#autocmd FileType unite call s:unite_settings()
+#'''
+
+# }}}
+# Unite {{{
+
+[[plugins]]
+repo = 'Shougo/unite.vim'
+hood_add = '''
+# Unite search -- not sure about this yet...
+if executable('ag')
+  let g:unite_source_grep_command = 'ag'
+  let g:unite_source_grep_default_opts = '--line-numbers --nocolor --nogroup --smart-case --hidden'
+  let g:unite_source_grep_recursive_opt = ''
+endif
+
+# Close Unite modal on esc
+function! s:unite_settings() "{
+   imap <buffer><Esc> :UniteClose<CR>
+ endfunction
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+'''
+
+[[plugins]]
+repo = 'tsukkee/unite-tag'
+
+[[plugins]]
+repo = 'Shougo/unite-session'
+
+# }}}
+# Airline {{{
+[[plugins]]
+repo = 'bling/vim-airline'
+hook_add = '''
+let g:airline_powerline_fonts=1
+let g:airline_theme = 'base16'
+let g:airline#extensions#tabline#enabled = 0 " tabs enable
+let g:airline#extensions#tabline#fnamemod = ':t' " name without full path
+let g:airline#extensions#whitespace#checks = [ 'indent' ] " off whitespaces indicator
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
+'''
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+# }}}
+# Syntax {{{
+
+[[plugins]]
+repo = 'mattn/emmet-vim'
+
+[[plugins]]
+repo = 'vimperator/vimperator.vim'
+on_ft = 'vimperator'
+
+[[plugins]]
+repo = 'klen/python-mode'
+on_ft = 'python'
+hood_add = '''
+let g:pymode_python = 'python3'
+set completeopt=menu " show docs only while menu open
+let g:pymode_options_max_line_length = 120
+let g:pymode_options_colorcolumn = 1
+let g:pymode_lint_on_fly = 1
+let g:pymode_lint_ignore = "E501, E115"
+'''
+
+[[plugins]]
+repo = 'hail2u/vim-css3-syntax'
+on_ft = 'css'
+
+[[plugins]]
+repo = 'ap/vim-css-color'
+on_ft = 'css'
+
+[[plugins]]
+repo = 'glench/vim-jinja2-syntax'
+on_ft = 'jinja, html'
+
+[[plugins]]
+repo = 'lepture/vim-jinja'
+
+[[plugins]]
+repo = 'othree/html5.vim'
+
+[[plugins]]
+repo = 'leafgarland/typescript-vim'
+on_ft = 'TypeScrypt'
+hook_add = '''
+let g:typescript_compiler_binary = 'tsc'
+let g:typescript_compiler_options = ''
+autocmd QuickFixCmdPost [^l]* nested cwindow
+autocmd QuickFixCmdPost    l* nested lwindow
+'''
+
+[[plugins]]
+repo = 'cespare/vim-toml'
+
+[[plugins]]
+repo = 'tmux-plugins/vim-tmux'
+on_ft = 'tmux'
+
+[[plugins]]
+repo = 'Valloric/MatchTagAlways'
+
+# }}}
+# NerdTree {{{
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+hood_add = '''
+let NERDTreeShowHidden=1 " show hidden files
+let NERDTreeMinimalUI = 1
+"let NERDTreeDirArrows = 1
+'''
+# }}}
+# Devicons{{{
+
+[[plugins]]
+repo = 'ryanoasis/vim-devicons'
+hood_add = '''
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+'''
+
+# }}}
+# Git {{{
+
+#[[plugins]]
+#repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+
+#[[plugins]]
+#repo = 'kmnk/vim-unite-giti'
+
+[[plugins]]
+repo = 'chemzqm/vim-easygit'
+hood_add = '''
+let g:easygit_enable_command = 1
+'''
+
+[[plugins]]
+repo = 'chemzqm/denite-git'
+
+# }}}
+# Hints {{{
+
+[[plugins]]
+repo = 'vim-syntastic/syntastic'
+hook_add = '''
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_typescript_checkers = ['tsuquyomi', 'tslint']
+let g:syntastic_typescript_tsc_args = '--target ES5 --noEmit'
+'''
+
+# }}}
+# Ui {{{
+
+[[plugins]]
+repo = 'mhinz/vim-startify'
+hook_add = '''
+let g:startify_custom_header=[]
+'''
+
+# }}}
