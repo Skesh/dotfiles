@@ -46,14 +46,14 @@ fi
 # Now lets clone my dotfiles repo into .dotfiles/
 echo "---------------------------------------------------------"
 
-echo "Cloning dotfiles insto .dotfiles"
+echo "Cloning dotfiles into .dotfiles"
 git clone https://github.com/skesh/dotfiles.git ~/.dotfiles
 
 cd .dotfiles
 git submodule update --init --recursive
 
 cd $HOME
-echo "running RCM's rcup command"
+echo "running dotfiles command"
 echo "This is symlink the rc files in .dofiles"
 echo "with the rc files in $HOME"
 echo "---------------------------------------------------------"
