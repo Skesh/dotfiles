@@ -53,15 +53,17 @@ let g:colors_name="monrovia"
 " MONROVIA HIGHLIGHTING:
 "=======================================================================================================================
 
-highlight! Normal                   guifg=#D3CBAF  guibg=#1F2433  gui=NONE       ctermfg=7     ctermbg=0     cterm=NONE
+"highlight! Normal                   guifg=#D3CBAF  guibg=#1F2433  gui=NONE       ctermfg=7     ctermbg=0     cterm=NONE
+highlight! Normal                   guifg=#D3CBAF  guibg=#191919  gui=NONE       ctermfg=7     ctermbg=0     cterm=NONE
 highlight! StatusLine               guifg=#D3CBAF  guibg=#375268  gui=NONE       ctermfg=7     ctermbg=8     cterm=NONE
 highlight! StatusLineNC             guifg=#1F2433  guibg=#375268  gui=NONE       ctermfg=0     ctermbg=8     cterm=NONE
 highlight! Type                     guifg=#B8937C  guibg=NONE     gui=NONE       ctermfg=13    ctermbg=0     cterm=NONE
 highlight! LineNr                   guifg=#2F4659  guibg=NONE     gui=NONE       ctermfg=8     ctermbg=NONE  cterm=NONE
 highlight! SpecialKey               guifg=#B55242  guibg=NONE     gui=NONE       ctermfg=4     ctermbg=0     cterm=NONE
 highlight! ErrorMsg                 guifg=#8C3432  guibg=NONE     gui=NONE       ctermfg=0     ctermbg=0     cterm=NONE
-highlight! CursorLine               guifg=NONE     guibg=#232839  gui=NONE       ctermfg=NONE  ctermbg=14    cterm=NONE
-highlight! CursorColumn             guifg=NONE     guibg=#1F2433  gui=NONE       ctermfg=NONE  ctermbg=0     cterm=NONE
+highlight! CursorLine               guifg=NONE     guibg=#202020  gui=NONE       ctermfg=NONE  ctermbg=14    cterm=NONE
+"highlight! CursorColumn             guifg=NONE     guibg=#1F2433  gui=NONE       ctermfg=NONE  ctermbg=0     cterm=NONE
+highlight! CursorColumn             guifg=NONE     guibg=#191919  gui=NONE       ctermfg=NONE  ctermbg=0     cterm=NONE
 highlight! String                   guifg=#538798  guibg=NONE     gui=NONE       ctermfg=3     ctermbg=NONE  cterm=NONE
 highlight! PreProc                  guifg=#8C3432  guibg=NONE     gui=NONE       ctermfg=1     ctermbg=NONE  cterm=NONE
 highlight! Comment                  guifg=#375268  guibg=NONE     gui=NONE       ctermfg=8     ctermbg=NONE  cterm=NONE
