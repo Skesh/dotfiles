@@ -8,9 +8,10 @@ set trashdir=~/.Trash
 
 " This is how many directories to store in the directory history.
 set history=0
+set vifminfo=state
 
 " Follow links on l or Enter.
-set followlinks
+"set followlinks
 
 " With this option turned on you can run partially entered commands with
 " unambiguous beginning using :! (e.g. :!Te instead of :!Terminal or :!Te<tab>).
@@ -34,7 +35,7 @@ set norunexec
 "set iec
 
 " Color scheme
-colorscheme skesh_theme
+colorscheme skesh_main
 
 " The FUSE_HOME directory will be used as a root dir for all FUSE mounts.
 " Unless it exists with write/exec permissions set, vifm will attempt to
@@ -45,7 +46,7 @@ set fusehome=/tmp/vifm_FUSE
 set timefmt=%d/%m/%Y\ %H:%M
 
 " Show list of matches on tab complition in command-line mode
-set wildmenu
+"set wildmenu
 
 " Ignore case in search patterns unless it contains at least one uppercase
 " letter
@@ -64,18 +65,10 @@ set scrolloff=4
 " Don't do to much requests to slow file systems
 set slowfs=curlftpfs
 
-"}}}
-
 " Set custom status line look
 set statusline="  %t%= %A %10u:%-7g %15s %20d  "
 
-" What should be saved automatically between vifm runs
-" Like in previous versions of vifm
-" set vifminfo=options,filetypes,commands,bookmarks,dhistory,state,cs
-" Like in vi
-set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
-    \phistory,fhistory,dirstack,registers,bookmarks
-
+"}}}
 " Marks {{{
 
 " :mark mark /full/directory/path [filename]
