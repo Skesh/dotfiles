@@ -54,7 +54,7 @@ let g:colors_name="monrovia"
 "=======================================================================================================================
 
 "highlight! Normal                   guifg=#D3CBAF  guibg=#1F2433  gui=NONE       ctermfg=7     ctermbg=0     cterm=NONE
-highlight! Normal                   guifg=#D3CBAF  guibg=#191919  gui=NONE       ctermfg=7     ctermbg=0     cterm=NONE
+highlight! Normal                   guifg=#D3CBAF  guibg=#2a2929  gui=NONE       ctermfg=7     ctermbg=0     cterm=NONE
 highlight! StatusLine               guifg=#D3CBAF  guibg=#375268  gui=NONE       ctermfg=7     ctermbg=8     cterm=NONE
 highlight! StatusLineNC             guifg=#1F2433  guibg=#375268  gui=NONE       ctermfg=0     ctermbg=8     cterm=NONE
 highlight! Type                     guifg=#B8937C  guibg=NONE     gui=NONE       ctermfg=13    ctermbg=0     cterm=NONE

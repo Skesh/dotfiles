@@ -4,13 +4,13 @@ module.exports = {
     fontSize: 16,
 
     // font family with optional fallbacks
-    fontFamily: '"Fira Code", "SauceCodePro Nerd Font", Menlo, "Lucida Console",  monospace',
+    fontFamily: '"SauceCodePro Nerd Font", Menlo, "Lucida Console",  monospace',
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
-    cursorColor: 'rgba(192,177,139,0.60)',
+    cursorColor: 'magenta',
 
     // `BEAM` for |, `UNDERLINE` for _, `BLOCK` for █
-    cursorShape: 'BLOCK',
+    cursorShape: 'BEAM',
 
     // color of the text
     foregroundColor: '#c0b18b',
@@ -98,6 +98,8 @@ module.exports = {
   //   `project#1.0.1`
   plugins: [
 	"hyperminimal",
+	"hyper-blink",
+	"hyper-tabs-enhanced"
   ],
 
   // in development, you can create a directory under

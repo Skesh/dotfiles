@@ -1,6 +1,7 @@
 config/htop
 config/xnviewmp
 config/yarn
+config/configstore
 vimperator/info
 vifm/vifminfo
 config/zsh/.zcompdump*

@@ -1,7 +1,7 @@
 # oh-my-zsh settings
 ZSH=$HOME/.config/zsh
 DEFAULT_USER="$USER"
-ZSH_THEME="agnoster"
+ZSH_THEME="theunraveler"
 plugins=(git virtualenv django)
 source $ZSH/skesh-oh-my-zsh.sh
 

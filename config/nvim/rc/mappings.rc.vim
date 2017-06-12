@@ -18,6 +18,7 @@ nnoremap <esc> :noh<return><esc>
 " in write mode
 imap <c-o> <esc>o
 
+nnoremap <Leader>f :NERDTreeToggle<Enter>
 " Unite {{{
 
 nnoremap <c-p> :Unite -buffer-name=files -no-split -wipe -start-insert file_rec/git<CR>
