@@ -26,11 +26,17 @@ alias rm='rm -v'
 alias top='top -o cpu'
 alias python='python3'
 alias pip='pip3'
-alias vi='nvim'
 alias vim='nvim'
+alias v='nvim'
 
 # exports
-export PATH='/usr/local/Cellar/python3/3.6.1/bin:/usr/local/bin:/usr/local/sbin:/bin:/sbin:/usr/bin:/usr/sbin:/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH:/usr/local/Cellar/node/7.10.0/bin'
+PATH=$PATH
+PATH+=/usr/sbin
+PATH+=/usr/local/sbin
+PATH+=/usr/local/Cellar/python3/3.6.2/bin
+PATH+=/usr/local/Cellar/node/7.10.0/bin
+PATH+=/Users/skesh/Scripts
+export PATH=$PATH
 export EDITOR='nvim'
 export PAGER='less'
 export TERM='xterm-256color'
@@ -50,9 +56,9 @@ HISTFILE=~/.cache/zsh/.zsh-history
 SAVEHIST=1000
 
 # Options
+CASE_SENSITIVE="true" # Не подставлять переменные окружения
 setopt HIST_IGNORE_ALL_DUPS # Игнорировать все повторения команд
 setopt HIST_IGNORE_SPACE # Игнорировать лишние пробелы
 setopt AUTO_CD 
 setopt NO_BEEP
 setopt MULTIBYTE
-CASE_SENSITIVE="true" 

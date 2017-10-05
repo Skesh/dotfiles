@@ -1,7 +1,7 @@
 " Vimperator Settings /*{{{*/
 
 " colorscheme
-colorscheme indigo
+colorscheme skmt
 
 set titlestring=""
 set visualbell

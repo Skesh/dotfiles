@@ -61,7 +61,7 @@ highlight! Type                     guifg=#B8937C  guibg=NONE     gui=NONE      
 highlight! LineNr                   guifg=#2F4659  guibg=NONE     gui=NONE       ctermfg=8     ctermbg=NONE  cterm=NONE
 highlight! SpecialKey               guifg=#B55242  guibg=NONE     gui=NONE       ctermfg=4     ctermbg=0     cterm=NONE
 highlight! ErrorMsg                 guifg=#8C3432  guibg=NONE     gui=NONE       ctermfg=0     ctermbg=0     cterm=NONE
-highlight! CursorLine               guifg=NONE     guibg=#202020  gui=NONE       ctermfg=NONE  ctermbg=14    cterm=NONE
+highlight! CursorLine               guifg=NONE     guibg=#2a2929  gui=NONE       ctermfg=NONE  ctermbg=14    cterm=NONE
 "highlight! CursorColumn             guifg=NONE     guibg=#1F2433  gui=NONE       ctermfg=NONE  ctermbg=0     cterm=NONE
 highlight! CursorColumn             guifg=NONE     guibg=#191919  gui=NONE       ctermfg=NONE  ctermbg=0     cterm=NONE
 highlight! String                   guifg=#538798  guibg=NONE     gui=NONE       ctermfg=3     ctermbg=NONE  cterm=NONE

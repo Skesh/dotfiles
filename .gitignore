@@ -5,3 +5,5 @@ config/configstore
 vimperator/info
 vifm/vifminfo
 config/zsh/.zcompdump*
+tmux/resurrect/last
+/tmux/resurrect

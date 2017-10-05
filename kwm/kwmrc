@@ -1,8 +1,8 @@
 et default values for screen padding
-kwmc config padding 35 15 15 15
+kwmc config padding 30 10 10 10
 
 # Set default values for container gaps
-kwmc config gap 15 15
+kwmc config gap 5 5
 
 # Default tiling mode for Kwm (bsp | monocle | float)
 kwmc config tiling bsp
@@ -23,22 +23,22 @@ kwmc config focus-follows-mouse off
 		kwmc config standby-on-float on
 
 # Center window when made floating
-kwmc config center-on-float on
+kwmc config center-on-float off
 
 /*
-    The mouse will automatically move to the center
-	    of the focused window
-		*/
-		kwmc config mouse-follows-focus on
+The mouse will automatically move to the center
+	of the focused window
+	*/
+	kwmc config mouse-follows-focus on
 
-		/*
-		    Allows a window to be moved by dragging,
-			    when a modifier key and left-click is held down.
+/*
+Allows a window to be moved by dragging,
+	when a modifier key and left-click is held down.
 
-				    Allows a window to be resized by dragging
-					    when a modifier key and right-click is held down.
-						*/
-						kwmc config mouse-drag on
+Allows a window to be resized by dragging
+	when a modifier key and right-click is held down.
+	*/
+	kwmc config mouse-drag on
 
 # The modifier keys to be held down to initiate mouse-drag
 kwmc config mouse-drag mod cmd+alt+ctrl
