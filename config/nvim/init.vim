@@ -20,8 +20,8 @@ colorscheme monrovia
 "---------------------------------------------------------------------------
 " Python:
 "
-let g:python_host_prog = '/usr/local/Cellar/python/2.7.13/bin/python2'
-let g:python3_host_prog = '/usr/local/Cellar/python3/3.6.2/bin/python3'
+let g:python_host_prog = '/usr/local/Cellar/python/2.7.14/bin/python2'
+let g:python3_host_prog = '/usr/local/Cellar/python3/3.6.3/bin/python3'
 
 "---------------------------------------------------------------------------
 " Search:
