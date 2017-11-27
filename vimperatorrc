@@ -88,6 +88,9 @@ set! full-screen-api.approval-required=false
 " new tab
 set! browser.newtab.preload=false
 
+" dont show popups notifications
+set! dom.push.enable=false
+
 " /*}}}*/
 
 " Keybindings /*{{{*/
