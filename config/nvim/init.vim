@@ -383,6 +383,6 @@ map И B
 map Т N
 map Ь M
 map Б <
-map Ю >/
+map Ю >
 " }}}
 "}}}

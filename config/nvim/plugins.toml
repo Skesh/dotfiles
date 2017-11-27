@@ -90,14 +90,14 @@ repo = 'vimperator/vimperator.vim'
 on_ft = 'vimperator'
 
 [[plugins]]
-repo = 'klen/python-mode'
+repo = 'python-mode/python-mode'
 on_ft = 'python'
 hook_add = '''
 let g:pymode_python = 'python3'
 let g:pymode_options_max_line_length = 120
 let g:pymode_options_colorcolumn = 1
 let g:pymode_lint_on_fly = 1
-let g:pymode_lint_ignore = "E501,E115,E116,W0611"
+let g:pymode_lint_ignore = ['E501', 'E115', 'E116', 'W']
 let g:pymode_run_bind = "<C-S-e>"
 let g:pymode_virtualenv = 1
 let g:pymode_virtualenv_enabled = ''
@@ -157,8 +157,8 @@ let g:NERDTreeDirArrowCollapsible = '●'
 let g:NERDTreeIgnore = ['\.pyc$', '.DS_Store', '__pycache__']
 '''
 
-# [[plugins]]
-# repo = 'dsimidzija/vim-nerdtree-ignore'
+[[plugins]]
+repo = 'dsimidzija/vim-nerdtree-ignore'
 
 [[plugins]]
 repo = 'tiagofumo/vim-nerdtree-syntax-highlight'
@@ -232,3 +232,9 @@ on_ft = 'python'
 [[plugins]]
 repo = 'tpope/vim-obsession'
 # }}}
+
+repo = 'lyokha/vim-xkbswitch'
+hook_add = '''
+let g:XkbSwitchEnabled = 1
+let g:XkbSwitchLib = '/usr/local/lib/libInputSourceSwitcher.dylib'
+'''
