@@ -14,6 +14,7 @@ fi
 
 packages=(
 "git"
+"python"
 "python3"
 "node"
 "tmux"
