@@ -4,7 +4,10 @@ packages = [
 	'config/zsh',
 	'config/nvim',]
 ignore = [
-    '.git',
-    '.zcompdump*',
-    'install.sh',
-    '.gitignore',]
+	'.git',
+	'.zcompdump*',
+	'install.sh',
+	'.gitignore',
+	'node_modules',
+	'package-lock.json'
+	]
