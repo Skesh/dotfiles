@@ -12,7 +12,7 @@ else
 
 fi
 
-packages=(
+brew_packages=(
 "git"
 "python"
 "python3"
@@ -25,9 +25,32 @@ packages=(
 "zsh"
 )
 
-for i in "${packages[@]}"
+pip2_packages=(
+	"neovim"
+)
+
+pip3_packages=(
+	"neovim"
+	"dotfiles"
+)
+
+echo "installing brew packages"
+for i in "${brew_packages[@]}"
 do
   brew install $i
+  echo "---------------------------------------------------------"
+done
+
+echo "installing pip packages"
+for i in "${pip2_packages[@]}"
+do
+	pip2 install $i
+  echo "---------------------------------------------------------"
+done
+
+for i in "${pip3_packages[@]}"
+do
+	pip3 install $i
   echo "---------------------------------------------------------"
 done
 
