@@ -1,0 +1,5 @@
+# vi-mode
+ctrl - j : skhd -k "down"
+ctrl - k : skhd -k "up"
+ctrl - h : skhd -k "left"
+ctrl - l : skhd -k "right"
