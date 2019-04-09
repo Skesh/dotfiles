@@ -1,8 +1,15 @@
-set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim/
+if &compatible
+	set nocompatible
+endif
 
-call dein#begin(expand('~/.cache/dein'))
-call dein#load_toml('~/.config/nvim/plugins.toml', {'lazy': 0})
-call dein#end()
+set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
+
+if dein#load_state('~/.cache/dein')
+	call dein#begin('~/.cache/dein')
+	call dein#load_toml('~/.config/nvim/plugins.toml', {'lazy': 0})
+	call dein#end()
+	call dein#save_state()
+endif
 
 " Options {{{
 
@@ -20,8 +27,8 @@ colorscheme monrovia
 "---------------------------------------------------------------------------
 " Python:
 "
-let g:python_host_prog = '/usr/local/Cellar/python/2.7.14/bin/python2'
-let g:python3_host_prog = '/usr/local/Cellar/python3/3.6.3/bin/python3'
+"let g:python_host_prog = '/usr/local/Cellar/python/2.7.14/bin/python2'
+let g:python_host_prog = '/usr/local/Cellar/python/3.7.3/bin/python3'
 
 "---------------------------------------------------------------------------
 " Search:
@@ -307,6 +314,9 @@ nnoremap <esc> :noh<return><esc>
 imap <c-o> <esc>o
 
 nnoremap <Leader>f :NERDTreeToggle<Enter>
+
+" insert mode
+inoremap jj <esc>
 " Denite {{{
 nnoremap <C-b> :Denite -mode=normal buffer -cursor-pos=0 -force-quit -statusline=false -highlight_matched_char=CursorLine -highlight_matched_range=CursorLine -highlight_mode_insert=CursorLine<CR>
 nnoremap <C-o> :Denite -mode=insert file_rec -auto-resize -cursor-pos=0 -force-quit <CR>

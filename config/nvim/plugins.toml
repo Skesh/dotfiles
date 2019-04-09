@@ -2,23 +2,6 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
-[[plugins]]
-repo = 'Shougo/denite.nvim'
-hook_add = '''
-let g:webdevicons_enable_denite = 0
-call denite#custom#option('default', {
-            \ 'auto_resize': 1,
-            \ 'statusline': 0,
-            \ 'winheight': 15,
-            \ 'updatetime': 100,
-            \ 'reversed': 1,
-            \ 'prompt': '❯',
-            \ 'prompt_highlight': 'Function',
-            \ 'highlight_matched_char': 'CursorLine',
-            \ 'highlight_matched_range': 'CursorLine',
-            \ 'highlight_mode_insert': 'StatusLine'
-            \ })
-'''
 
 [[plugins]]
 repo = 'haya14busa/dein-command.vim'
