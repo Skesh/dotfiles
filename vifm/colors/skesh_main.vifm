@@ -14,8 +14,8 @@ highlight TopLine cterm=none ctermfg=lightBlack ctermbg=none
 highlight TopLineSel cterm=none ctermfg=lightBlack ctermbg=none
 highlight StatusLine cterm=none ctermfg=lightBlack ctermbg=none
 highlight WildMenu cterm=underline,reverse ctermfg=white ctermbg=black
-highlight CmdLine cterm=none ctermfg=white ctermbg=none
-highlight ErrorMsg cterm=none ctermfg=red ctermbg=black
+highlight CmdLine cterm=none ctermfg=none ctermbg=none
+highlight ErrorMsg cterm=none ctermfg=red ctermbg=none
 highlight Border cterm=none ctermfg=none ctermbg=none
 
 " no 256-color palette on Windows
