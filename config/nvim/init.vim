@@ -27,8 +27,7 @@ colorscheme monrovia
 "---------------------------------------------------------------------------
 " Python:
 "
-"let g:python_host_prog = '/usr/local/Cellar/python/2.7.14/bin/python2'
-let g:python_host_prog = '/usr/local/Cellar/python/3.7.3/bin/python3'
+let g:python_host_prog = '/usr/bin/python3'
 
 "---------------------------------------------------------------------------
 " Search:
@@ -286,7 +285,7 @@ set conceallevel=2 concealcursor=niv
 
 set colorcolumn=79
 set showmatch
-set relativenumber
+" set relativenumber
 " }}} 
 " Keymap {{{
 let mapleader=","
