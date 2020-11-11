@@ -2,7 +2,6 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
-
 [[plugins]]
 repo = 'haya14busa/dein-command.vim'
 
@@ -14,33 +13,38 @@ repo = 'Shougo/vimproc.vim'
 build = 'make'
 # }}}
 # Complete {{{
-[[plugins]]
-repo = 'Shougo/deoplete.nvim'
-build = ':UpdateRemotePlugins'
-hook_add = '''
-let g:deoplete#enable_at_startup = 1
-set completeopt+=noinsert
-autocmd FileType unite call s:unite_settings()
-'''
-# }}}
-# Airline {{{
-[[plugins]]
-repo = 'bling/vim-airline'
-hook_add = '''
-let g:airline_powerline_fonts=1
-let g:airline_theme = 'behelit'
-let g:airline#extensions#tabline#enabled = 0 " tabs enable
-let g:airline#extensions#tabline#fnamemod = ':t' " name without full path
-let g:airline#extensions#whitespace#checks = [ 'indent' ] " off whitespaces indicator
-let g:airline_left_sep = ''
-let g:airline_right_sep = ''
-'''
+
+# [[plugins]]
+# repo = 'Shougo/deoplete.nvim'
+# build = ':UpdateRemotePlugins'
+# hook_add = '''
+# let g:deoplete#enable_at_startup = 1
+# set completeopt+=noinsert
+# autocmd FileType unite call s:unite_settings()
+# '''
 
 [[plugins]]
-repo = 'vim-airline/vim-airline-themes'
-hook_add = '''
-let g:airline_theme='zenburn'
-'''
+repo = 'neoclide/coc.vim'
+
+# }}}
+# Airline {{{
+# [[plugins]]
+# repo = 'bling/vim-airline'
+# hook_add = '''
+# let g:airline_powerline_fonts=1
+# let g:airline_theme = 'behelit'
+# let g:airline#extensions#tabline#enabled = 0 " tabs enable
+# let g:airline#extensions#tabline#fnamemod = ':t' " name without full path
+# let g:airline#extensions#whitespace#checks = [ 'indent' ] " off whitespaces indicator
+# let g:airline_left_sep = ''
+# let g:airline_right_sep = ''
+# '''
+
+# [[plugins]]
+# repo = 'vim-airline/vim-airline-themes'
+# hook_add = '''
+# let g:airline_theme='zenburn'
+# '''
 # }}}
 # Syntax {{{
 
@@ -215,3 +219,7 @@ on_ft = 'python'
 [[plugins]]
 repo = 'tpope/vim-obsession'
 # }}}
+
+[[plugins]]
+repo = 'haishanh/night-owl.vim'
+
