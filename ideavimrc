@@ -1,1 +1,52 @@
+set multiple-cursors
+
+let mapleader = ","
+
+nmap J 5j
+nmap K 5k
+nmap L 5l
+nmap H 5h
+vnoremap J 5j
+vnoremap K 5k
+vnoremap L 5l
+vnoremap H 5h
+
+nnoremap <Tab> gt
+nnoremap <S-Tab> gT
+
+nmap <leader>o :action GotoFile<cr>
+nmap <leader>n :action ActivateProjectToolWindow<cr>
+nmap <leader>z :action HideAllWindows<cr>
+nmap <leader>d :action GotoDeclaration<cr>
+nmap <leader>b :action Back<cr>
+nmap <leader>i :action ShowIntentionActions<cr>
+nmap <leader>a :action SwitchViewActions<cr>
+
+nnoremap ; :action emacsIDEAs.AceJump<cr>
+" nnoremap <space> :action CollapseAll<cr>
+
+" nnoremap <leader>ls :action ngxQuickSwitch.QuickSwitch<cr>
+nnoremap <leader>lh :action live.angular.actions.SwitchToTemplate<cr>
+nnoremap <leader>lt :action live.angular.actions.SwitchToComponent<cr>
+nnoremap <leader>ls :action live.angular.actions.SwitchToStyle<cr>
+
+nmap <leader>ga :action Annotate<cr>
+nmap <leader>gc :action VcsToolbarActions<cr>
+
+nmap <leader>rr :action RenameElement<cr>
+
+vnoremap <leader>cc :action CommentByLineComment<cr>
+
+nmap <leader>rr :action RenameElement<cr>
+
+nnoremap <leader>ff :action ReformatCode<cr>
+nnoremap <leader>fi :action OptimizeImports<cr>
+
+nnoremap <leader>ss :action FileStructurePopup<cr>
+nnoremap <leader>sl :action RecentLocations<cr>
+nnoremap <leader>sf :action RecentFiles<cr>
+nnoremap <leader>su :action ShowUsages<cr>
+
+nnoremap <leader>pr :source ~/.ideavimrc<cr>
+
 inoremap jj <esc>
