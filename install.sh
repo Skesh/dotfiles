@@ -28,8 +28,7 @@ pip_packages=(
 cask_apps(
   '1password'
   'alfred'
-  'daisydisk' # buy?
-  'dash' # upgrade?
+  # 'dash' # upgrade?
   'docker'
   'google-chrome'
   'iina'
@@ -38,27 +37,25 @@ cask_apps(
   'karabiner-elements'
   'little-snitch'
   'mongodb-compass'
-  'numi' # change!
-  'opera' # change
+  # 'numi' # change!
+  # 'opera' # change
   'paw'
   'skype'
   'sublime-merge'
   'sublime-text'
   'veracrypt'
-  'transmit' # change / forklift
   'visual-studio-code'
   'webstorm'
   'contexts'
   'sip'
   'transmission'
-  'postico' # need?
 )
 
 mas_apps=(
   '747648890'   # Telegram
   '1438243180'  # Dark Reader for Safari
   '1449412482'  # Reeder
-  '1176895641'  # Spark
+  # '1176895641'  # Spark
   '803453959'   # Slack
   '1480933944'  # Vimari
   '1320666476'  # Wirp
