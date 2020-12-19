@@ -25,8 +25,8 @@ if [ -f ~/.aliases ]; then
 fi
 
 # env
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
-export EDITOR='nvim'
+export PATH="/usr/local/bin:/usr/local/sbin:/Users/skesh/.bin:$PATH"
+export EDITOR='emacs'
 export PAGER='less'
 export TERM='xterm-256color'
 export LC_ALL='ru_RU.UTF-8'
@@ -37,6 +37,7 @@ ZSH_AUTOSUGGEST_USE_ASYNC=true
 
 # Homebrew beer icon off
 export HOMEBREW_NO_EMOJI=1
+export HOMEBREW_CASK_OPTS='--no-quarantine'
 
 # less colors
 export GREP_COLOR="1;31" # grep selection color

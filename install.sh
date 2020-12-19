@@ -18,6 +18,8 @@ brew_packages=(
   "git-flow"
   "exa"
   "imgcat" # for view images in vifm
+  "git"
+  "git-flow"
 )
 
 pip_packages=(
@@ -28,17 +30,14 @@ pip_packages=(
 cask_apps(
   '1password'
   'alfred'
-  # 'dash' # upgrade?
+  'dash' # upgrade?
   'docker'
   'google-chrome'
   'iina'
-  'istat-menus'
   'iterm2'
   'karabiner-elements'
   'little-snitch'
   'mongodb-compass'
-  # 'numi' # change!
-  # 'opera' # change
   'paw'
   'skype'
   'sublime-merge'
@@ -49,6 +48,8 @@ cask_apps(
   'contexts'
   'sip'
   'transmission'
+  'appcleaner'
+  'brave-browser'
 )
 
 mas_apps=(

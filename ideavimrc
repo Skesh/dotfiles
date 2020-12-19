@@ -23,11 +23,11 @@ nmap <leader>i :action ShowIntentionActions<cr>
 nmap <leader>a :action SwitchViewActions<cr>
 
 nnoremap ; :action emacsIDEAs.AceJump<cr>
-" nnoremap <space> :action CollapseAll<cr>
+"nnoremap <space> :action CollapseAll<cr>
 
-" nnoremap <leader>ls :action ngxQuickSwitch.QuickSwitch<cr>
+nnoremap <leader>ls :action live.angular.actions.SwitchToTest<cr>
 nnoremap <leader>lh :action live.angular.actions.SwitchToTemplate<cr>
-nnoremap <leader>lt :action live.angular.actions.SwitchToComponent<cr>
+nnoremap <leader>lc :action live.angular.actions.SwitchToComponent<cr>
 nnoremap <leader>ls :action live.angular.actions.SwitchToStyle<cr>
 
 nmap <leader>ga :action Annotate<cr>

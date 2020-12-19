@@ -134,7 +134,7 @@ filetype *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.vob,*.flv
         \ open %f,
 
 " Web
-filetype *.html,*.htm nvim %f
+filetype *.html,*.htm emacs %f
 
 " Object
 filetype *.o nm %f | less

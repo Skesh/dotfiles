@@ -27,7 +27,7 @@ colorscheme monrovia
 "---------------------------------------------------------------------------
 " Python:
 "
-let g:python_host_prog = '/usr/bin/python3'
+let g:python_host_prog = '/usr/bin/python'
 
 "---------------------------------------------------------------------------
 " Search:
