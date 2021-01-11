@@ -8,11 +8,11 @@ highlight Device cterm=none ctermfg=red ctermbg=default
 highlight Fifo cterm=none ctermfg=cyan ctermbg=default
 highlight Executable cterm=none ctermfg=blue ctermbg=default
 
-highlight CurrLine cterm=none ctermfg=default ctermbg=lightBlack
+highlight CurrLine cterm=underline ctermfg=cyan ctermbg=none
 
 highlight TopLine cterm=none ctermfg=lightBlack ctermbg=none
 highlight TopLineSel cterm=none ctermfg=lightBlack ctermbg=none
-highlight StatusLine cterm=none ctermfg=lightBlack ctermbg=none
+highlight StatusLine cterm=none ctermfg=white ctermbg=none
 highlight WildMenu cterm=underline,reverse ctermfg=white ctermbg=black
 highlight CmdLine cterm=none ctermfg=none ctermbg=none
 highlight ErrorMsg cterm=none ctermfg=red ctermbg=none
